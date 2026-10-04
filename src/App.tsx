@@ -1,17 +1,17 @@
 import { BrowserRouter } from "react-router-dom";
 //import axios from "axios";
-//import type { OnePieceCharactersResponse } from "./Models/OnePieceCharactersResponse";
 import { TEST_CHARACTERS_RESPONSE } from "./Models/TestCharactersResponse";
 import { useState } from "react";
+import type { CharactersResponse } from "./Models/CharactersResponse";
 
 //const response = await axios.get(
 //	"https://api.tenrai.org/v1/anime/21/characters",
 //);
-//const onePieceCharacters: OnePieceCharactersResponse = response.data;
+//const characterResponse: CharactersResponse = response.data;
+const characterResponse: CharactersResponse = TEST_CHARACTERS_RESPONSE;
 
 export default function App() {
 	const [search, setSearch] = useState("");
-	console.log(search);
 
 	return (
 		<BrowserRouter basename={import.meta.env.BASE_URL}>
@@ -21,19 +21,25 @@ export default function App() {
 				placeholder="Search character..."
 				onChange={(e) => setSearch(e.target.value)}
 			></input>
-			<CharactersComponent></CharactersComponent>
+			<CharactersComponent search={search}></CharactersComponent>
 		</BrowserRouter>
 	);
 }
 
-function CharactersComponent() {
+function CharactersComponent({ search }: { search: string }) {
 	return (
 		<ol>
-			{TEST_CHARACTERS_RESPONSE.data.map((characterResponse) => (
-				<li key={characterResponse.character.mal_id}>
-					{characterResponse.character.name}
-				</li>
-			))}
+			{characterResponse.data
+				.filter((characterResponse) =>
+					characterResponse.character.name
+						.toLowerCase()
+						.includes(search.toString().toLowerCase()),
+				)
+				.map((characterResponse) => (
+					<li key={characterResponse.character.mal_id}>
+						{characterResponse.character.name}
+					</li>
+				))}
 		</ol>
 	);
 }

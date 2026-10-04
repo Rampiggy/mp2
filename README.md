@@ -33,7 +33,16 @@
 - https://stackoverflow.com/questions/43894565/cast-object-to-interface-in-typescript
 - https://stackoverflow.com/questions/54684886/what-is-the-difference-between-using-the-colon-and-as-syntax-for-declaring-type
 
+## Youtube
+
+- https://www.youtube.com/watch?v=xAqCEBFGdYk
+
 ## Misc
 
--https://www.educative.io/answers/how-to-add-comments-in-jsx
--https://app.quicktype.io/
+- https://www.educative.io/answers/how-to-add-comments-in-jsx
+- https://app.quicktype.io/
+- https://www.iamtimsmith.com/blog/lets-build-a-search-bar-using-react-hooks
+
+## React Docs
+
+- https://react.dev/learn/typescript#typing-style-props
