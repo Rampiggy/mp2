@@ -17,6 +17,7 @@ body {
 	background-color: var(--darkest-color);
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
+	color: var(--lightest-color);
 }
 
 h1 {
