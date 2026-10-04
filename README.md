@@ -3,6 +3,7 @@
 ## W3 Schools
 
 - https://www.w3schools.com/react/react_router.asp
+- https://www.geeksforgeeks.org/reactjs/loop-inside-react-jsx/
 
 ## Tenrai API
 
@@ -34,4 +35,5 @@
 
 ## Misc
 
-https://www.educative.io/answers/how-to-add-comments-in-jsx
+-https://www.educative.io/answers/how-to-add-comments-in-jsx
+-https://app.quicktype.io/

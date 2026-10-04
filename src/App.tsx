@@ -1,28 +1,28 @@
 import { BrowserRouter } from "react-router-dom";
-import axios from "axios";
+//import axios from "axios";
+//import type { OnePieceCharactersResponse } from "./Models/OnePieceCharactersResponse";
+import { TEST_CHARACTERS_RESPONSE } from "./Models/TestCharactersResponse";
 
-const response = await axios.get(
-	"https://jsonplaceholder.typicode.com/posts/1",
-);
-
-const testResponse: TestResponse = response.data;
-console.log(testResponse);
+//const response = await axios.get(
+//	"https://api.tenrai.org/v1/anime/21/characters",
+//);
+//const onePieceCharacters: OnePieceCharactersResponse = response.data;
 
 export default function App() {
 	return (
 		<BrowserRouter basename={import.meta.env.BASE_URL}>
 			<h1>One Piece Characters &lt;strawhat svg&gt;</h1>
-			<ul>
-				<li>{testResponse.userId}</li>
-				<li>{testResponse.title}</li>
-				<li>{testResponse.body}</li>
-			</ul>
+			<CharactersComponent></CharactersComponent>
 		</BrowserRouter>
 	);
 }
 
-interface TestResponse {
-	userId: number;
-	title: string;
-	body: string;
+function CharactersComponent() {
+	return (
+		<ol>
+			{TEST_CHARACTERS_RESPONSE.data.map((characterResponse, index) => (
+				<li key={index}>{characterResponse.character.name}</li>
+			))}
+		</ol>
+	);
 }
