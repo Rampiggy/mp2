@@ -42,6 +42,7 @@
 - https://www.educative.io/answers/how-to-add-comments-in-jsx
 - https://app.quicktype.io/
 - https://www.iamtimsmith.com/blog/lets-build-a-search-bar-using-react-hooks
+- https://blog.logrocket.com/understanding-min-content-max-content-fit-content-css/
 
 ## React Docs
 
