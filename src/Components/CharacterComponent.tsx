@@ -1,4 +1,4 @@
-import type { CharacterResponse } from "../Models/CharactersResponse";
+//import type { CharacterResponse } from "../Models/CharactersResponse";
 
 export default function CharacterComponent({
 	//	characterResponse,
