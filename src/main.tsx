@@ -8,12 +8,16 @@ import CharacterComponent from "./Components/CharacterComponent.tsx";
 const router = createBrowserRouter(
 	[
 		{
-			path: "/",
-			element: <App />,
+			index: true,
+			Component: App,
 		},
 		{
 			path: "/characters/:characterId",
-			element: <CharacterComponent characterId="yo" />,
+			loader: ({ params }) => {
+				const characterId = params.characterId;
+				return { characterId: characterId };
+			},
+			Component: CharacterComponent,
 		},
 	],
 	{ basename: import.meta.env.BASE_URL },

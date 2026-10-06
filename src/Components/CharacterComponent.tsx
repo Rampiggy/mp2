@@ -1,17 +1,16 @@
 //import type { CharacterResponse } from "../Models/CharactersResponse";
 
-export default function CharacterComponent({
+import { useLoaderData } from "react-router-dom";
+
+export default function CharacterComponent() {
 	//	characterResponse,
 	//}: {
 	//	characterResponse: CharacterResponse;
 	//}) {
-	characterId,
-}: {
-	characterId: string;
-}) {
+	const data: { characterId: string } = useLoaderData();
 	return (
 		<>
-			<h1>{characterId}</h1>
+			<h1>{data.characterId}</h1>
 		</>
 	);
 }
