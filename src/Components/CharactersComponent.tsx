@@ -30,10 +30,11 @@ export default function CharactersComponent() {
 			></input>
 
 			<ol>
-				{filteredCharacters.map((characterResponse) => (
+				{filteredCharacters.map((characterResponse, index) => (
 					<li key={characterResponse.character.mal_id}>
 						<Link
 							to={`characters/${characterResponse.character.mal_id}`}
+							state={[search, filteredCharacters, index]}
 						>
 							{characterResponse.character.name}
 						</Link>

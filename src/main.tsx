@@ -11,14 +11,13 @@ import CharactersComponent from "./Components/CharactersComponent.tsx";
 //	"https://api.tenrai.org/v1/anime/21/characters",
 //);
 //const characterResponse: CharactersResponse = response.data;
+const charactersResponse: CharactersResponse = TEST_CHARACTERS_RESPONSE;
 
 const router = createBrowserRouter(
 	[
 		{
 			index: true,
 			loader: () => {
-				const charactersResponse: CharactersResponse =
-					TEST_CHARACTERS_RESPONSE;
 				return { charactersResponse: charactersResponse };
 			},
 			Component: CharactersComponent,
