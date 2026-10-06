@@ -31,28 +31,41 @@ input {
 
 ol {
 	list-style-type: none;
-	margin: auto;
-	width: 200px;
+	color: var(--lightest-color);
 }
 
 li {
 	background-color: var(--blue-color);
 	border: var(--off-white-color) solid 1px;
-	padding: 20px 10px;
-	margin: 15px 0;
+	height: 60px;
+	width: 200px;
+	margin: 15px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 li:hover {
 	cursor: pointer;
-	color: var(--orange-color);
 	border-color: var(--orange-color);
+	color: var(--orange-color);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 footer {
 	display: flex;
 	align-items: center;
 	background: var(--orange-color);
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	height: 50px;
 	width: 100%;

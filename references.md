@@ -4,6 +4,7 @@
 
 - https://blog.logrocket.com/understanding-min-content-max-content-fit-content-css/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
+- https://www.geeksforgeeks.org/css/how-to-make-flexbox-children-100-height-of-their-parent-using-css/
 
 ## JSX
 
@@ -29,6 +30,9 @@
 - https://www.w3schools.com/react/react_router.asp
 - https://reactrouter.com/start/declarative/routing
 - https://www.youtube.com/watch?v=oTIJunBa6MA
+- https://reactrouter.com/start/data/routing
+- https://reactrouter.com/start/data/route-object
+- https://reactrouter.com/start/framework/navigating
 
 ## Axios
 
