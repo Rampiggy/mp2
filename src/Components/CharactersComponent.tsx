@@ -1,18 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import type {
 	CharacterResponse,
 	CharactersResponse,
 } from "../Models/CharactersResponse";
+import { useState } from "react";
 
-export default function CharactersComponent({
-	charactersResponse,
-	search,
-}: {
-	charactersResponse: CharactersResponse;
-	search: string;
-}) {
+export default function CharactersComponent() {
+	const loaderData: { charactersResponse: CharactersResponse } =
+		useLoaderData();
+
+	const [search, setSearch] = useState("");
+
 	const filteredCharacters: CharacterResponse[] =
-		charactersResponse.data.filter((characterResponse) =>
+		loaderData.charactersResponse.data.filter((characterResponse) =>
 			characterResponse.character.name
 				.toLowerCase()
 				.includes(search.toString().toLowerCase()),
@@ -20,6 +20,15 @@ export default function CharactersComponent({
 
 	return (
 		<>
+			<h1>One Piece Characters &lt;strawhat svg&gt;</h1>
+
+			<input
+				type="search"
+				placeholder="Search character..."
+				onChange={(e) => setSearch(e.target.value)}
+				name="character-name"
+			></input>
+
 			<ol>
 				{filteredCharacters.map((characterResponse) => (
 					<li key={characterResponse.character.mal_id}>
@@ -31,8 +40,10 @@ export default function CharactersComponent({
 					</li>
 				))}
 			</ol>
+
 			<footer>
-				<p>Rows returned: {filteredCharacters.length}</p>
+				<span>Search: {search}</span>
+				<span>Rows returned: {filteredCharacters.length}</span>
 			</footer>
 		</>
 	);

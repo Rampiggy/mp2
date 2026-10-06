@@ -31,7 +31,6 @@ input {
 
 ol {
 	list-style-type: none;
-	color: var(--lightest-color);
 }
 
 li {
@@ -62,17 +61,36 @@ a {
 }
 
 footer {
-	display: flex;
-	align-items: center;
 	background: var(--orange-color);
 	position: fixed;
 	bottom: 0;
 	height: 50px;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
 }
 
-footer p {
-	position: absolute;
-	left: 20px;
-	margin: auto;
+footer span {
+	background-color: var(--darkest-color);
+	height: 70%;
+	padding: 7px;
+	width: 250px;
+	text-wrap: nowrap;
+	overflow: auto clip;
+	scrollbar-width: thin;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+@media (width <= 600px) {
+	footer {
+		gap: 10px;
+	}
+
+	footer span {
+		width: 150px;
+	}
 }

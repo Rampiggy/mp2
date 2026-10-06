@@ -1,15 +1,27 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./Components/App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CharacterComponent from "./Components/CharacterComponent.tsx";
+import { TEST_CHARACTERS_RESPONSE } from "./Models/TestCharactersResponse.ts";
+import type { CharactersResponse } from "./Models/CharactersResponse.ts";
+import CharactersComponent from "./Components/CharactersComponent.tsx";
+
+//const response = await axios.get(
+//	"https://api.tenrai.org/v1/anime/21/characters",
+//);
+//const characterResponse: CharactersResponse = response.data;
 
 const router = createBrowserRouter(
 	[
 		{
 			index: true,
-			Component: App,
+			loader: () => {
+				const charactersResponse: CharactersResponse =
+					TEST_CHARACTERS_RESPONSE;
+				return { charactersResponse: charactersResponse };
+			},
+			Component: CharactersComponent,
 		},
 		{
 			path: "/characters/:characterId",

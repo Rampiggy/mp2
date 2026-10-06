@@ -5,6 +5,12 @@
 - https://blog.logrocket.com/understanding-min-content-max-content-fit-content-css/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
 - https://www.geeksforgeeks.org/css/how-to-make-flexbox-children-100-height-of-their-parent-using-css/
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/cursor
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/overflow
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-wrap
+- https://stackoverflow.com/questions/7646538/disable-vertical-scroll-bar-on-div-overflow-auto
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using
+- https://stackoverflow.com/questions/20626685/how-do-i-set-distance-between-flexbox-items
 
 ## JSX
 

@@ -7,10 +7,10 @@ export default function CharacterComponent() {
 	//}: {
 	//	characterResponse: CharacterResponse;
 	//}) {
-	const data: { characterId: string } = useLoaderData();
+	const loaderData: { characterId: string } = useLoaderData();
 	return (
 		<>
-			<h1>{data.characterId}</h1>
+			<h1>{loaderData.characterId}</h1>
 		</>
 	);
 }
