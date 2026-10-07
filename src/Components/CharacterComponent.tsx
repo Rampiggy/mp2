@@ -19,8 +19,10 @@ export default function CharacterComponent() {
 		index = location.state[2];
 	}
 
-	const showLeftArrow: boolean = index - 1 >= 0;
-	const showRightArrow: boolean = index + 1 <= filteredCharacters.length - 1;
+	const prevIndex: number =
+		index - 1 < 0 ? filteredCharacters.length - 1 : index - 1;
+	const nextIndex: number =
+		index + 1 > filteredCharacters.length - 1 ? 0 : index + 1;
 
 	return (
 		<>
@@ -30,21 +32,17 @@ export default function CharacterComponent() {
 
 			<main className="character">
 				<section className="character-top">
-					{showLeftArrow ? (
-						<Link
-							to={`../characters/${filteredCharacters[index - 1].character.mal_id}`}
-							state={[search, filteredCharacters, index - 1]}
-						>
-							<img
-								className="arrow"
-								src={leftArrow}
-								alt="A left arrow to go to the previous One Piece character"
-								width="50"
-							></img>
-						</Link>
-					) : (
-						<div className="arrow-filler"></div>
-					)}
+					<Link
+						to={`../characters/${filteredCharacters[prevIndex].character.mal_id}`}
+						state={[search, filteredCharacters, prevIndex]}
+					>
+						<img
+							className="arrow"
+							src={leftArrow}
+							alt="A left arrow to go to the previous One Piece character"
+							width="50"
+						></img>
+					</Link>
 					<img
 						className="character-image"
 						src={currCharacter.character.images.jpg.image_url}
@@ -52,21 +50,17 @@ export default function CharacterComponent() {
 						width="200"
 						height="311.11"
 					></img>
-					{showRightArrow ? (
-						<Link
-							to={`../characters/${filteredCharacters[index + 1].character.mal_id}`}
-							state={[search, filteredCharacters, index + 1]}
-						>
-							<img
-								className="arrow"
-								src={rightArrow}
-								alt="A right arrow to go to the next One Piece character"
-								width="50"
-							></img>
-						</Link>
-					) : (
-						<div className="arrow-filler"></div>
-					)}
+					<Link
+						to={`../characters/${filteredCharacters[nextIndex].character.mal_id}`}
+						state={[search, filteredCharacters, nextIndex]}
+					>
+						<img
+							className="arrow"
+							src={rightArrow}
+							alt="A right arrow to go to the next One Piece character"
+							width="50"
+						></img>
+					</Link>
 				</section>
 				<section className="character-bottom">
 					<p>
