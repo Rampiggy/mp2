@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
+import "./Styles/index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CharacterComponent from "./Components/CharacterComponent.tsx";
 import type { CharacterResponse } from "./Models/CharactersResponse.ts";
-import CharactersComponent from "./Components/CharactersComponent.tsx";
+import CharactersListComponent from "./Components/CharactersListComponent.tsx";
 import { FULL_CHARACTERS_RESPONSE_DATA } from "./HardcodedResponseData/FullCharactersResponseData.ts";
 
 //const response = await axios.get(
@@ -21,7 +21,7 @@ const router = createBrowserRouter(
 			loader: () => {
 				return { characterResponses: charactersResponses };
 			},
-			Component: CharactersComponent,
+			Component: CharactersListComponent,
 		},
 		{
 			path: "/characters/:characterId",

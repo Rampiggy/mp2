@@ -1,0 +1,36 @@
+@import "index.css";
+
+.character {
+	img {
+		width: 200px;
+	}
+
+	a {
+		color: lightblue;
+		text-decoration: none;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	ul ul {
+		list-style-type: disc;
+		list-style-position: inside;
+	}
+}
+
+.character-top {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 20px;
+	background-color: var(--blue-color);
+}
+
+.character-top-right {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	text-align: left;
+}
