@@ -1,18 +1,15 @@
 import { Link, useLoaderData } from "react-router-dom";
-import type {
-	CharacterResponse,
-	CharactersResponse,
-} from "../Models/CharactersResponse";
+import type { CharacterResponse } from "../Models/CharactersResponse";
 import { useState } from "react";
 
 export default function CharactersComponent() {
-	const loaderData: { charactersResponse: CharactersResponse } =
+	const loaderData: { characterResponses: CharacterResponse[] } =
 		useLoaderData();
 
 	const [search, setSearch] = useState("");
 
 	const filteredCharacters: CharacterResponse[] =
-		loaderData.charactersResponse.data.filter((characterResponse) =>
+		loaderData.characterResponses.filter((characterResponse) =>
 			characterResponse.character.name
 				.toLowerCase()
 				.includes(search.toString().toLowerCase()),

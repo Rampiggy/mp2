@@ -4,17 +4,19 @@ import { useLoaderData, useLocation } from "react-router-dom";
 import type { CharacterResponse } from "../Models/CharactersResponse";
 
 export default function CharacterComponent() {
-	const loaderData: { characterId: string } = useLoaderData();
+	const loaderData: { currentCharacter: CharacterResponse } = useLoaderData();
+	const currCharacter: CharacterResponse = loaderData.currentCharacter;
+
+	let search: string = "";
+	let filteredCharacters: CharacterResponse[] = [currCharacter];
+	let index: number = 0;
 
 	const location = useLocation();
-
-	const search: string = location.state[0];
-	const filteredCharacters: CharacterResponse[] = location.state[1];
-	const index: number = location.state[2];
-
-	const currCharacter: CharacterResponse = filteredCharacters[index];
-
-	console.log(currCharacter);
+	if (location.state != null) {
+		search = location.state[0];
+		filteredCharacters = location.state[1];
+		index = location.state[2];
+	}
 
 	return (
 		<>

@@ -26,6 +26,7 @@
 - https://stackoverflow.com/questions/43894565/cast-object-to-interface-in-typescript
 - https://stackoverflow.com/questions/54684886/what-is-the-difference-between-using-the-colon-and-as-syntax-for-declaring-type
 - https://app.quicktype.io/
+- https://stackoverflow.com/questions/1133770/how-can-i-convert-a-string-to-an-integer-in-javascript
 
 ## React
 
@@ -39,6 +40,7 @@
 - https://reactrouter.com/start/data/routing
 - https://reactrouter.com/start/data/route-object
 - https://reactrouter.com/start/framework/navigating
+- https://dev.to/olabisi09/how-to-pass-data-across-routes-with-react-router-53jm
 
 ## Axios
 
