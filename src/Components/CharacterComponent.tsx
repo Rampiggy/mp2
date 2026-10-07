@@ -98,7 +98,7 @@ export default function CharacterComponent() {
 			<footer>
 				<span>Search: {search}</span>
 				<span>
-					Row {index} / {filteredCharacters.length}
+					Row {index + 1} / {filteredCharacters.length}
 				</span>
 			</footer>
 		</>
