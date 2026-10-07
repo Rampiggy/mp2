@@ -28,11 +28,14 @@
 - https://stackoverflow.com/questions/54684886/what-is-the-difference-between-using-the-colon-and-as-syntax-for-declaring-type
 - https://app.quicktype.io/
 - https://stackoverflow.com/questions/1133770/how-can-i-convert-a-string-to-an-integer-in-javascript
+- https://www.typescripttutorial.net/typescript-tutorial/typescript-boolean/
 
 ## React
 
 - https://react.dev/learn/typescript#typing-style-props
 - https://stackoverflow.com/questions/39999367/how-do-i-reference-a-local-image-in-react
+- https://stackoverflow.com/questions/40477245/is-it-possible-to-use-if-else-statement-in-react-render-function
+- https://legacy.reactjs.org/docs/conditional-rendering.html
 
 ## React Router
 
