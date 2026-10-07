@@ -1,22 +1,12 @@
 @import "index.css";
 
 .character {
-	.character-image {
-		width: 200px;
-		height: fit-content;
-	}
-
 	a {
 		color: lightblue;
 		text-decoration: none;
 	}
 
 	ul {
-		list-style-type: none;
-	}
-
-	ul ul {
-		list-style-type: disc;
 		list-style-position: inside;
 	}
 }
@@ -27,4 +17,18 @@
 	justify-content: center;
 	gap: 20px;
 	background-color: var(--blue-color);
+	padding: 20px;
+}
+
+.character-bottom {
+	padding: 20px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	text-align: left;
+	gap: 40px;
+}
+
+.arrow:hover {
+	cursor: pointer;
 }

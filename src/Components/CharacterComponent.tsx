@@ -28,6 +28,7 @@ export default function CharacterComponent() {
 			<main className="character">
 				<section className="character-top">
 					<img
+						className="arrow"
 						src={leftArrow}
 						alt="A left arrow to go to the previous One Piece character"
 						width="50"
@@ -36,35 +37,33 @@ export default function CharacterComponent() {
 						className="character-image"
 						src={currCharacter.character.images.jpg.image_url}
 						alt="Image of the current One Piece character selected"
+						width="200"
+						height="311.11"
 					></img>
 					<img
+						className="arrow"
 						src={rightArrow}
 						alt="A right arrow to go to the next One Piece character"
 						width="50"
 					></img>
 				</section>
 				<section className="character-bottom">
-					<ul className="character-bottom-container">
-						<li>
-							Source:{" "}
-							<a href={currCharacter.character.url}>MAL</a>
-						</li>
-						<br></br>
-						<li>Role: {currCharacter.role}</li>
-						<br></br>
-						<li>
-							Voice Actors:
-							<ul className="voice-actors">
-								{currCharacter.voice_actors.map(
-									(voiceActor, index) => (
-										<li key={index}>
-											{voiceActor.language} &ndash;{" "}
-											{voiceActor.person.name}
-										</li>
-									),
-								)}
-							</ul>
-						</li>
+					<p>
+						Source:<br></br>
+						<a href={currCharacter.character.url}>MAL</a>
+					</p>
+					<p>
+						Role:<br></br>
+						{currCharacter.role}
+					</p>
+					<ul className="voice-actors">
+						Voice Actors:
+						{currCharacter.voice_actors.map((voiceActor, index) => (
+							<li key={index}>
+								{voiceActor.language} &ndash;{" "}
+								{voiceActor.person.name}
+							</li>
+						))}
 					</ul>
 				</section>
 			</main>
