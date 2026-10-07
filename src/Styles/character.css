@@ -18,6 +18,7 @@
 	gap: 20px;
 	background-color: var(--blue-color);
 	padding: 20px;
+	align-items: center;
 }
 
 .character-bottom {
@@ -31,4 +32,8 @@
 
 .arrow:hover {
 	cursor: pointer;
+}
+
+.arrow-filler {
+	width: 50px;
 }
