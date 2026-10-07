@@ -5,14 +5,14 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CharacterComponent from "./Components/CharacterComponent.tsx";
 import type { CharacterResponse } from "./Models/CharactersResponse.ts";
 import CharactersComponent from "./Components/CharactersComponent.tsx";
-import { TEST_CHARACTERS_RESPONSE_LARGE } from "./TestData/TestCharactersResponseLarge.ts";
+import { FULL_CHARACTERS_RESPONSE_DATA } from "./HardcodedResponseData/FullCharactersResponseData.ts";
 
 //const response = await axios.get(
 //https://api.tenrai.org/v1/anime/21/characters",
 //);
 //const characterResponse: CharactersResponse = response.data;
 const charactersResponses: CharacterResponse[] =
-	TEST_CHARACTERS_RESPONSE_LARGE.data;
+	FULL_CHARACTERS_RESPONSE_DATA.data;
 
 const router = createBrowserRouter(
 	[

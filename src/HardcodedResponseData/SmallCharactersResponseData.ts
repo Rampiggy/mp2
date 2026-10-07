@@ -1,6 +1,6 @@
 import type { CharactersResponse } from "../Models/CharactersResponse";
 
-export const TEST_CHARACTERS_RESPONSE_SMALL : CharactersResponse = {
+export const SMALL_CHARACTERS_RESPONSE_DATA : CharactersResponse = {
     "data": [
         {
             "character": {
