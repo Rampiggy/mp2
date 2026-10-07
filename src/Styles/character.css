@@ -1,8 +1,9 @@
 @import "index.css";
 
 .character {
-	img {
+	.character-image {
 		width: 200px;
+		height: fit-content;
 	}
 
 	a {
@@ -26,11 +27,4 @@
 	justify-content: center;
 	gap: 20px;
 	background-color: var(--blue-color);
-}
-
-.character-top-right {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	text-align: left;
 }

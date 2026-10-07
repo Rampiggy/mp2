@@ -11,6 +11,7 @@
 - https://stackoverflow.com/questions/7646538/disable-vertical-scroll-bar-on-div-overflow-auto
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using
 - https://stackoverflow.com/questions/20626685/how-do-i-set-distance-between-flexbox-items
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/list-style-type
 
 ## JSX
 
@@ -31,6 +32,7 @@
 ## React
 
 - https://react.dev/learn/typescript#typing-style-props
+- https://stackoverflow.com/questions/39999367/how-do-i-reference-a-local-image-in-react
 
 ## React Router
 
