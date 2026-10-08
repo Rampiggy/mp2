@@ -5,36 +5,37 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CharacterComponent from "./Components/CharacterComponent.tsx";
 import type { CharacterResponse } from "./Models/CharactersResponse.ts";
 import CharactersListComponent from "./Components/CharactersListComponent.tsx";
-import { FULL_CHARACTERS_RESPONSE_DATA } from "./HardcodedResponseData/FullCharactersResponseData.ts";
+//import { FULL_CHARACTERS_RESPONSE_DATA } from "./HardcodedResponseData/FullCharactersResponseData.ts";
 import GalleryComponent from "./Components/GalleryComponent.tsx";
+import axios from "axios";
 
-//const response = await axios.get(
-//https://api.tenrai.org/v1/anime/21/characters",
-//);
-//const characterResponse: CharactersResponse = response.data;
-const charactersResponses: CharacterResponse[] =
-	FULL_CHARACTERS_RESPONSE_DATA.data;
+const response = await axios.get(
+	"https://api.tenrai.org/v1/anime/21/characters",
+);
+const characterResponses: CharacterResponse[] = response.data.data;
+//const characterResponses: CharacterResponse[] =
+//	FULL_CHARACTERS_RESPONSE_DATA.data;
 
 const router = createBrowserRouter(
 	[
 		{
 			index: true,
 			loader: () => {
-				return { characterResponses: charactersResponses };
+				return { characterResponses: characterResponses };
 			},
 			Component: CharactersListComponent,
 		},
 		{
 			path: "/gallery",
 			loader: () => {
-				return { characterResponses: charactersResponses };
+				return { characterResponses: characterResponses };
 			},
 			Component: GalleryComponent,
 		},
 		{
 			path: "/characters/:characterId",
 			loader: ({ params }) => {
-				const currCharacter = charactersResponses.find(
+				const currCharacter = characterResponses.find(
 					(c) => c.character.mal_id === Number(params.characterId),
 				);
 				return { currentCharacter: currCharacter };
