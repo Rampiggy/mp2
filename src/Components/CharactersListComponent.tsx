@@ -19,7 +19,13 @@ export default function CharactersListComponent() {
 	return (
 		<>
 			<header>
-				<h1>One Piece Characters &lt;strawhat svg&gt;</h1>
+				<nav>
+					<a className="current-nav">List</a>
+					<Link to="/" state={[search]}>
+						Gallery
+					</Link>
+				</nav>
+				<h1>One Piece Characters</h1>
 			</header>
 
 			<main className="characters">

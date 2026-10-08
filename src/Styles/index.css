@@ -20,6 +20,41 @@ body {
 	padding-bottom: 50px;
 }
 
+nav {
+	padding-top: 30px;
+	display: flex;
+	gap: 45px;
+	justify-content: center;
+
+	a {
+		color: var(--off-white-color);
+		text-decoration: none;
+		background-color: var(--blue-color);
+		padding: 20px;
+		font-size: 30px;
+		width: 140px;
+		border-radius: 15%;
+		border: solid var(--darkest-color);
+	}
+
+	a:hover {
+		color: var(--lightest-color);
+		font-weight: bold;
+		border-color: var(--orange-color);
+	}
+
+	.current-nav {
+		color: var(--lightest-color);
+		font-weight: bold;
+		border-color: var(--darkest-color);
+	}
+
+	.current-nav:hover {
+		cursor: default;
+		border-color: var(--darkest-color);
+	}
+}
+
 h1 {
 	color: var(--orange-color);
 	padding: 35px 5px 20px;

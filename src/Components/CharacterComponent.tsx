@@ -27,6 +27,14 @@ export default function CharacterComponent() {
 	return (
 		<>
 			<header>
+				<nav>
+					<Link to="/" state={[search]}>
+						List
+					</Link>
+					<Link to="/" state={[search]}>
+						Gallery
+					</Link>
+				</nav>
 				<h1>{currCharacter.character.name}</h1>
 			</header>
 
