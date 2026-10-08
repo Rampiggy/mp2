@@ -1,5 +1,10 @@
 # References
 
+## HTML
+
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/checkbox
+
 ## CSS
 
 - https://blog.logrocket.com/understanding-min-content-max-content-fit-content-css/
@@ -12,7 +17,7 @@
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using
 - https://stackoverflow.com/questions/20626685/how-do-i-set-distance-between-flexbox-items
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/list-style-type
-- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio
+- https://stackoverflow.com/questions/42180807/how-to-disable-input-field-history-using-html
 
 ## JSX
 

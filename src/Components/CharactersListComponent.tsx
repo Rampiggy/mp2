@@ -84,6 +84,7 @@ export default function CharactersListComponent() {
 						placeholder="Search character..."
 						onChange={(e) => setSearch(e.target.value)}
 						name="character-name"
+						autoComplete="off"
 					></input>
 
 					<div className="checkboxes">

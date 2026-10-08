@@ -42,10 +42,10 @@ export default function GalleryComponent() {
 		<>
 			<header>
 				<nav>
-					<a className="current-nav">List</a>
-					<Link to="/gallery" state={[search]}>
-						Gallery
+					<Link to="/" state={[search]}>
+						List
 					</Link>
+					<a className="current-nav">Gallery</a>
 				</nav>
 
 				<h1>One Piece Characters</h1>
@@ -84,6 +84,7 @@ export default function GalleryComponent() {
 						placeholder="Search character..."
 						onChange={(e) => setSearch(e.target.value)}
 						name="character-name"
+						autoComplete="off"
 					></input>
 
 					<div className="checkboxes">
