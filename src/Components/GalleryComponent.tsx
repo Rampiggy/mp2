@@ -1,9 +1,9 @@
-import "../Styles/characters.css";
+import "../Styles/gallery.css";
 import { Link, useLoaderData } from "react-router-dom";
 import type { CharacterResponse } from "../Models/CharactersResponse";
 import { useState } from "react";
 
-export default function CharactersListComponent() {
+export default function GalleryComponent() {
 	const loaderData: { characterResponses: CharacterResponse[] } =
 		useLoaderData();
 
@@ -20,15 +20,15 @@ export default function CharactersListComponent() {
 		<>
 			<header>
 				<nav>
-					<a className="current-nav">List</a>
-					<Link to="/gallery" state={[search]}>
-						Gallery
+					<Link to="/" state={[search]}>
+						List
 					</Link>
+					<a className="current-nav">Gallery</a>
 				</nav>
 				<h1>One Piece Characters</h1>
 			</header>
 
-			<main className="characters">
+			<main className="gallery">
 				<input
 					type="search"
 					placeholder="Search character..."
@@ -43,7 +43,16 @@ export default function CharactersListComponent() {
 								to={`/characters/${characterResponse.character.mal_id}`}
 								state={[search, filteredCharacters, index]}
 							>
-								{characterResponse.character.name}
+								<img
+									src={
+										characterResponse.character.images.webp
+											.image_url
+									}
+									alt="Image of a One Piece character"
+									width="110"
+									height="171.09"
+								/>
+								<p>{characterResponse.character.name}</p>
 							</Link>
 						</li>
 					))}

@@ -18,10 +18,10 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	color: var(--lightest-color);
 	padding-bottom: 50px;
+	padding: 30px 30px 50px;
 }
 
 nav {
-	padding-top: 30px;
 	display: flex;
 	gap: 45px;
 	justify-content: center;
@@ -47,17 +47,24 @@ nav {
 		color: var(--lightest-color);
 		font-weight: bold;
 		border-color: var(--darkest-color);
+		border-bottom-color: var(--lightest-color);
 	}
 
 	.current-nav:hover {
 		cursor: default;
 		border-color: var(--darkest-color);
+		border-bottom-color: var(--lightest-color);
 	}
 }
 
 h1 {
 	color: var(--orange-color);
 	padding: 35px 5px 20px;
+}
+
+input {
+	padding: 5px;
+	margin: auto auto 30px;
 }
 
 footer {

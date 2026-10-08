@@ -6,6 +6,7 @@ import CharacterComponent from "./Components/CharacterComponent.tsx";
 import type { CharacterResponse } from "./Models/CharactersResponse.ts";
 import CharactersListComponent from "./Components/CharactersListComponent.tsx";
 import { FULL_CHARACTERS_RESPONSE_DATA } from "./HardcodedResponseData/FullCharactersResponseData.ts";
+import GalleryComponent from "./Components/GalleryComponent.tsx";
 
 //const response = await axios.get(
 //https://api.tenrai.org/v1/anime/21/characters",
@@ -22,6 +23,13 @@ const router = createBrowserRouter(
 				return { characterResponses: charactersResponses };
 			},
 			Component: CharactersListComponent,
+		},
+		{
+			path: "/gallery",
+			loader: () => {
+				return { characterResponses: charactersResponses };
+			},
+			Component: GalleryComponent,
 		},
 		{
 			path: "/characters/:characterId",

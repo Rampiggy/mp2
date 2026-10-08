@@ -1,33 +1,29 @@
-.characters {
+.gallery {
 	ol {
 		list-style-type: none;
+		display: flex;
+		gap: 30px;
+		flex-flow: row wrap;
 	}
 
 	li {
 		background-color: var(--blue-color);
 		border: var(--off-white-color) solid 1px;
-		height: 60px;
-		width: 200px;
-		margin: 15px auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 
 	li:hover {
 		cursor: pointer;
 		border-color: var(--orange-color);
 		color: var(--orange-color);
-		font-weight: bold;
 	}
 
 	a {
+		padding: 10px;
 		text-decoration: none;
 		color: inherit;
-		width: 100%;
-		height: 100%;
 		display: flex;
-		justify-content: center;
 		align-items: center;
+		flex-flow: column nowrap;
+		gap: 10px;
 	}
 }

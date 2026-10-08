@@ -31,7 +31,7 @@ export default function CharacterComponent() {
 					<Link to="/" state={[search]}>
 						List
 					</Link>
-					<Link to="/" state={[search]}>
+					<Link to="/gallery" state={[search]}>
 						Gallery
 					</Link>
 				</nav>
@@ -53,7 +53,7 @@ export default function CharacterComponent() {
 					</Link>
 					<img
 						className="character-image"
-						src={currCharacter.character.images.jpg.image_url}
+						src={currCharacter.character.images.webp.image_url}
 						alt="Image of the current One Piece character selected"
 						width="200"
 						height="311.11"
