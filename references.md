@@ -12,6 +12,7 @@
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries/Using
 - https://stackoverflow.com/questions/20626685/how-do-i-set-distance-between-flexbox-items
 - https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/list-style-type
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio
 
 ## JSX
 
@@ -29,6 +30,7 @@
 - https://app.quicktype.io/
 - https://stackoverflow.com/questions/1133770/how-can-i-convert-a-string-to-an-integer-in-javascript
 - https://www.typescripttutorial.net/typescript-tutorial/typescript-boolean/
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 ## React
 
