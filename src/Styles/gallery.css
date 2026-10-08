@@ -2,13 +2,14 @@
 	ol {
 		list-style-type: none;
 		display: flex;
-		gap: 30px;
 		flex-flow: row wrap;
+		row-gap: 35px;
 	}
 
 	li {
 		background-color: var(--blue-color);
 		border: var(--off-white-color) solid 1px;
+		margin: auto 20px;
 	}
 
 	li:hover {

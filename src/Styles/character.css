@@ -19,6 +19,9 @@
 	background-color: var(--blue-color);
 	padding: 20px;
 	align-items: center;
+	border: solid 1px;
+	border-left: none;
+	border-right: none;
 }
 
 .character-bottom {

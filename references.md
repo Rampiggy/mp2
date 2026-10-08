@@ -60,3 +60,7 @@
 
 - https://www.youtube.com/watch?v=xAqCEBFGdYk
 - https://www.iamtimsmith.com/blog/lets-build-a-search-bar-using-react-hooks
+
+## Misc
+
+- https://www.reddit.com/r/Wordpress/comments/1jl0xq2/jpeg_vs_webp_whats_the_best_choice/
