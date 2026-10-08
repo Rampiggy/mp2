@@ -27,14 +27,25 @@ export default function GalleryComponent() {
 		);
 	}
 
+	const [isMain, setIsMain] = useState(true);
+	const [isSupporting, setIsSupporting] = useState(true);
+	if (!isMain) {
+		filteredCharacters = filteredCharacters.filter((c) => c.role != "Main");
+	}
+	if (!isSupporting) {
+		filteredCharacters = filteredCharacters.filter(
+			(c) => c.role != "Supporting",
+		);
+	}
+
 	return (
 		<>
 			<header>
 				<nav>
-					<Link to="/" state={[search]}>
-						List
+					<a className="current-nav">List</a>
+					<Link to="/gallery" state={[search]}>
+						Gallery
 					</Link>
-					<a className="current-nav">Gallery</a>
 				</nav>
 
 				<h1>One Piece Characters</h1>
@@ -67,12 +78,32 @@ export default function GalleryComponent() {
 						/>
 						<label htmlFor="descending">Descending</label>
 					</div>
+
 					<input
 						type="search"
 						placeholder="Search character..."
 						onChange={(e) => setSearch(e.target.value)}
 						name="character-name"
 					></input>
+
+					<div className="checkboxes">
+						<input
+							type="checkbox"
+							id="main"
+							name="main"
+							defaultChecked
+							onChange={() => setIsMain(!isMain)}
+						/>
+						<label htmlFor="main">Main</label>
+						<input
+							type="checkbox"
+							id="supporting"
+							name="supporting"
+							defaultChecked
+							onChange={() => setIsSupporting(!isSupporting)}
+						/>
+						<label htmlFor="supporting">Supporting</label>
+					</div>
 				</div>
 			</header>
 
